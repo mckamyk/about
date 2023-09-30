@@ -1,112 +1,135 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col items-center gap-4 bg-black text-gray-300 pb-8">
+      <div className="fixed h-[100px] w-full bg-gradient-to-b from-blue-400/25 to-transparent" />
+
+      <div className="flex min-h-screen flex-col items-center gap-4 z-10">
+        <div className="h-20" />
+        <div className="rounded-full bg-gradient-to-tr from-red-600 to-blue-500 p-1">
+          <Image src="/profile.jpg" width={100} height={100} alt="Profile Picture" className="rounded-full" />
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div>
+        </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <div className="">
+          <div className="text-3xl font-bold">McKittrick Kaminski</div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <div className="text-xl mt-2 text-center">Software Engineer</div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+          <div className="mt-2 flex items-center justify-center gap-2">
+            <Link href="https://x.com/mckamyk" target="_blank" className="flex items-center border border-gray-300 rounded-lg px-2 py-1 hover:bg-white/25 transition-colors shadow-md shadow-transparent hover:shadow-gray-300">
+              <Image
+                src="/x.svg"
+                width={14}
+                height={14}
+                alt="X Logo"
+                className="mr-1"
+              />
+              McKamyk
+            </Link>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            <Link href="https://github.com/mckamyk" target="_blank" className="flex items-center border border-gray-300 rounded-lg px-2 py-1 hover:bg-white/25 transition-colors shadow-md shadow-transparent hover:shadow-gray-300">
+              <Image
+                src="/github.svg"
+                width={16}
+                height={16}
+                alt="Github Logo"
+                className="mr-1"
+              />
+              McKamyk
+            </Link>
+          </div>
+        </div>
+
+        <div className="h-[100px]"></div>
+
+        <div>
+          <div className="flex justify-between items-end">
+            <div className="text-left text-2xl xl:text-4xl font-bold pl-8 pb-4">Self Contained Preact Web Components</div>
+            <div className="text-right text-gray-700 italic">
+              example repo coming soon...
+            </div>
+          </div>
+          <div className="flex flex-col xl:flex-row justify-center max-w-[1200px] gap-4">
+            <Image
+              src="/preactComponent-1.svg"
+              height={800}
+              width={600}
+              alt="Preact Component"
+              className="rounded-lg shadow-blue-900 shadow-md"
+            />
+            <div className="flex flex-col gap-y-2 px-2 xl:px-0 justify-between">
+              <Image
+                src="/preactComponent-2.svg"
+                height={200}
+                width={600}
+                alt="Consumer of Preact Component"
+                className="rounded-lg shadow-blue-900 shadow-md"
+              />
+              <Image
+                src="/preactComponent-3.svg"
+                height={200}
+                width={600}
+                alt="Consumer of Preact Component"
+                className="rounded-lg shadow-blue-900 shadow-md"
+              />
+
+              <div className="text-lg font-semibold text-center">
+                <p className="text-center">
+                  Technique to embed multiple react-like components inside an unowned DOM that supports Custom Elements.
+                </p>
+              </div>
+              <div className="text-center">
+                <code className="bg-gray-800 rounded-md px-2 py-1">Bun.build()</code> bundles all files in the repository that end in
+                <code className="bg-gray-800 rounded-md px-2 py-1">*.component.tsx</code> as an entrypoint. It treeshakes and chunks shared code. The exported
+                bundles are an ES module, allowing browsers cache locally. These components could be served statically.
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div className="h-[100px]"></div>
+
+        <div>
+          <div className="flex justify-between items-end">
+            <div className="text-left text-2xl xl:text-4xl font-bold pl-8 pb-4">Forbidden Full Stack</div>
+            <div className="text-right text-gray-700 italic">
+              example repo and site coming soon...
+            </div>
+          </div>
+          <div className="flex flex-col xl:flex-row justify-center max-w-[1200px] gap-4">
+            <Image
+              src="/ffs.svg"
+              height={600}
+              width={600}
+              alt="Forbidden Fullstack"
+              className="grow"
+            />
+            <div className="flex flex-col px-2 xl:px-0 max-w-[600px] justify-between">
+              <div className="text-lg mt-4 font-semibold text-center">
+                <p className="text-center">
+                  This was a fun experiment in building a Full Stack website with a mix of Server and Client Side Rendering from "scratch".
+                </p>
+              </div>
+              <ul className="mt-4 flex flex-col gap-2">
+                <li><code className="bg-gray-800 rounded-md px-2 py-1">react-dom/server</code> to render jsx to html on the server</li>
+                <li><code className="bg-gray-800 rounded-md px-2 py-1">htmx</code> to load run-time enriched components</li>
+                <li><code className="bg-gray-800 rounded-md px-2 py-1 text-blue-500">preact</code> to build client-rendered elements</li>
+                <li><code className="bg-gray-800 rounded-md px-2 py-1 text-blue-500">preact-custom-elements</code> allows HTMX to load preact components</li>
+                <li><code className="bg-gray-800 rounded-md px-2 py-1 text-green-600">trpc</code> for type-safe calls from preact components to the server</li>
+                <li><code className="bg-gray-800 rounded-md px-2 py-1">tailwind</code> for styles</li>
+                <li><code className="bg-gray-800 rounded-md px-2 py-1">elysia</code> for hosting the server</li>
+                <li><code className="bg-gray-800 rounded-md px-2 py-1">Bun</code> for runtime execution and bundling of preact components</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )
