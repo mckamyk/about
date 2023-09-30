@@ -114,7 +114,7 @@ export default function Home() {
             <div className="flex flex-col px-2 xl:px-0 max-w-[600px] justify-between">
               <div className="text-lg mt-4 font-semibold text-center">
                 <p className="text-center">
-                  This was a fun experiment in building a Full Stack website with a mix of Server and Client Side Rendering from "scratch".
+                  This was a fun experiment in building a Full Stack website with a mix of Server and Client Side Rendering from &quot;scratch&quot;.
                 </p>
               </div>
               <ul className="mt-4 flex flex-col gap-2">
