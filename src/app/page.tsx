@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-screen flex-col items-center gap-4 bg-black text-gray-300 pb-48">
-      <div className="fixed h-[100px] w-full bg-gradient-to-b from-blue-400/25 to-transparent" />
+    <main className="flex min-h-screen w-full flex-col items-center gap-4 bg-gray-950 text-gray-300 pb-48">
+      <div className="fixed h-[100px] w-full left-0 bg-gradient-to-b from-blue-400/25 to-transparent" />
 
       <div className="flex min-h-screen w-full flex-col items-center gap-4 z-10 max-w-[1200px]">
         <div className="h-20" />
