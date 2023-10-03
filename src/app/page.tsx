@@ -3,16 +3,13 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-4 bg-black text-gray-300 pb-8">
+    <main className="flex min-h-screen w-screen flex-col items-center gap-4 bg-black text-gray-300 pb-48">
       <div className="fixed h-[100px] w-full bg-gradient-to-b from-blue-400/25 to-transparent" />
 
-      <div className="flex min-h-screen flex-col items-center gap-4 z-10">
+      <div className="flex min-h-screen w-full flex-col items-center gap-4 z-10 max-w-[1200px]">
         <div className="h-20" />
         <div className="rounded-full bg-gradient-to-tr from-red-600 to-blue-500 p-1">
           <Image src="/profile.jpg" width={100} height={100} alt="Profile Picture" className="rounded-full" />
-        </div>
-
-        <div>
         </div>
 
         <div className="">
@@ -45,38 +42,41 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="h-[100px]"></div>
+        <div className="w-full h-[100px] flex items-center">
+          <span className="w-1/2 bg-gradient-to-r from-transparent to-blue-600 inline h-2" />
+          <span className="w-1/2 bg-gradient-to-r from-blue-600 to-transparent inline h-2" />
+        </div>
 
-        <div>
+        <div className="w-full max-w-[1200px]">
           <div className="flex justify-between items-end">
             <div className="text-left text-2xl xl:text-4xl font-bold pl-8 pb-4">Self Contained Preact Web Components</div>
-            <div className="text-right text-gray-700 italic">
-              example repo coming soon...
-            </div>
           </div>
-          <div className="flex flex-col xl:flex-row justify-center max-w-[1200px] gap-4">
-            <Image
-              src="/preactComponent-1.svg"
-              height={800}
-              width={600}
-              alt="Preact Component"
-              className="rounded-lg shadow-blue-900 shadow-md"
-            />
-            <div className="flex flex-col gap-y-2 px-2 xl:px-0 justify-between">
+          <div className="grid grid-cols-2 w-full max-w-[1200px] gap-4 px-2 xl:px-0">
+            <div className="col-span-2 xl:col-span-1 relative aspect-[1/1]">
               <Image
-                src="/preactComponent-2.svg"
-                height={200}
-                width={600}
-                alt="Consumer of Preact Component"
-                className="rounded-lg shadow-blue-900 shadow-md"
+                src="/preactComponent-1.svg"
+                fill
+                alt="Preact Component"
+                className="col-span-2 xl:col-span-1 rounded-lg shadow-blue-900 shadow-md"
               />
-              <Image
-                src="/preactComponent-3.svg"
-                height={200}
-                width={600}
-                alt="Consumer of Preact Component"
-                className="rounded-lg shadow-blue-900 shadow-md"
-              />
+            </div>
+            <div className="col-span-2 xl:col-span-1 flex flex-col gap-y-4 justify-between">
+              <div className="relative aspect-[2/1]">
+                <Image
+                  src="/preactComponent-2.svg"
+                  fill
+                  alt="Consumer of Preact Component"
+                  className="rounded-lg shadow-blue-900 shadow-md"
+                />
+              </div>
+              <div className="relative aspect-[4/1]">
+                <Image
+                  src="/preactComponent-3.svg"
+                  fill
+                  alt="Consumer of Preact Component"
+                  className="rounded-lg shadow-blue-900 shadow-md"
+                />
+              </div>
 
               <div className="text-lg font-semibold text-center">
                 <p className="text-center">
@@ -84,34 +84,33 @@ export default function Home() {
                 </p>
               </div>
               <div className="text-center">
-                <code className="bg-gray-800 rounded-md px-2 py-1">Bun.build()</code> bundles all files in the repository that end in
-                <code className="bg-gray-800 rounded-md px-2 py-1">*.component.tsx</code> as an entrypoint. It treeshakes and chunks shared code. The exported
+                <code className="bg-gray-800 rounded-md px-2 py-1">Bun.build()</code> bundles all files in the repository that end in 
+                <code className="bg-gray-800 rounded-md px-2 py-1 ml-1">*.component.tsx</code> as an entrypoint. It treeshakes and chunks shared code. The exported
                 bundles are an ES module, allowing browsers cache locally. These components could be served statically.
               </div>
-
-
             </div>
           </div>
         </div>
 
-        <div className="h-[100px]"></div>
+        <div className="w-full h-[100px] flex items-center">
+          <span className="w-1/2 bg-gradient-to-r from-transparent to-blue-600 inline h-2" />
+          <span className="w-1/2 bg-gradient-to-r from-blue-600 to-transparent inline h-2" />
+        </div>
 
-        <div>
+        <div className="w-full max-w-[1200px]">
           <div className="flex justify-between items-end">
             <div className="text-left text-2xl xl:text-4xl font-bold pl-8 pb-4">Forbidden Full Stack</div>
-            <div className="text-right text-gray-700 italic">
-              example repo and site coming soon...
-            </div>
           </div>
-          <div className="flex flex-col xl:flex-row justify-center max-w-[1200px] gap-4">
-            <Image
-              src="/ffs.svg"
-              height={600}
-              width={600}
-              alt="Forbidden Fullstack"
-              className="grow"
-            />
-            <div className="flex flex-col px-2 xl:px-0 max-w-[600px] justify-between">
+          <div className="grid grid-cols-2 w-full max-w-[1200px] gap-4">
+            <div className="col-span-2 xl:col-span-1 relative aspect-[1.5/1]">
+              <Image
+                src="/ffs.svg"
+                fill
+                alt="Forbidden Fullstack"
+                className="grow"
+              />
+            </div>
+            <div className="col-span-2 xl:col-span-1 flex flex-col px-2 xl:px-0 max-w-[600px] justify-between">
               <div className="text-lg mt-4 font-semibold text-center">
                 <p className="text-center">
                   This was a fun experiment in building a Full Stack website with a mix of Server and Client Side Rendering from &quot;scratch&quot;.
@@ -127,6 +126,51 @@ export default function Home() {
                 <li><code className="bg-gray-800 rounded-md px-2 py-1">elysia</code> for hosting the server</li>
                 <li><code className="bg-gray-800 rounded-md px-2 py-1">Bun</code> for runtime execution and bundling of preact components</li>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full h-[100px] flex items-center">
+          <span className="w-1/2 bg-gradient-to-r from-transparent to-blue-600 inline h-2" />
+          <span className="w-1/2 bg-gradient-to-r from-blue-600 to-transparent inline h-2" />
+        </div>
+
+        <div className="w-full max-w-[1200px]">
+          <div className="flex justify-center items-end">
+            <div className="text-2xl xl:text-4xl font-bold pb-4 w-[600px] xl:w-[1200px]">Web3 Self-Attested Credit Score</div>
+          </div>
+          <div className="grid grid-cols-2 justify-center items-center w-full max-w-[1200px] gap-4 px-2 xl:px-0">
+            <div className="col-span-2 relative w-full aspect-[1.3/1]">
+              <Image
+                fill
+                src="/JankaChart.svg"
+                alt="Janka Score Flow Chart"
+              />
+            </div>
+
+            <div className="col-span-2 xl:col-span-1 relative aspect-[600/413]">
+              <Image
+                fill
+                src="/janka.png"
+                alt="Janka Score Homepage Image"
+              />
+            </div>
+
+            <div className="col-span-2 xl:col-span-1 self-stretch flex flex-col justify-around">
+              <h2 className="text-xl font-semibold text-center">EthDenver 2023 Hackathon Project</h2>
+
+              <p className="text-center">
+                DeFi Credit scoring application that allows users to self-attest their credit scores.
+                The credit scores are calculated on Loan data sourced from TheGraph and posted with a 
+                small stake on chain. If there are no challenges, within the optmistic window, the 
+                user can reclaim their stake. During the optimistic window, validators can check
+                the calculation to assure the user did not lie.
+              </p>
+
+              <p className="text-center">
+                My responsiblities included the overall architecture and implementation of the Gelato
+                Web3 Functions, Frontend, Algorithm compilation, IPFS node hosting and pinning, and DApp deployment.
+              </p>
             </div>
           </div>
         </div>
