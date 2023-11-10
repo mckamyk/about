@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import {Analytics} from '@vercel/analytics/react'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen w-full flex-col items-center gap-4 bg-gray-950 text-gray-300 pb-48">
+      <Analytics />
       <div className="fixed h-[100px] w-full left-0 bg-gradient-to-b from-blue-400/25 to-transparent" />
 
       <div className="flex min-h-screen w-full flex-col items-center gap-4 z-10 max-w-[1200px]">
