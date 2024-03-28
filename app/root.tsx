@@ -11,7 +11,11 @@ import { ClientOnly } from "remix-utils/client-only";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="bg-gray-950">
+    <html
+      lang="en"
+      className="bg-gray-950"
+      style={{ backgroundColor: "rgb(3 7 18)" }}
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
