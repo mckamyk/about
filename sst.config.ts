@@ -13,8 +13,10 @@ export default $config({
     new sst.aws.Remix("MyWeb", {
       domain: isProd
         ? {
-            domainName: "about.mckamyk.io",
-            hostedZone: "mckamyk.io",
+            name: "about.mckamyk.io",
+            dns: sst.aws.dns({
+              zone: "Z03383253DRRF3ZSA5C6K",
+            }),
           }
         : undefined,
     });

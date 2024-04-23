@@ -31,6 +31,7 @@
     "usehooks-ts": "^3.0.2"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.5",
     "@remix-run/dev": "^2.8.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
